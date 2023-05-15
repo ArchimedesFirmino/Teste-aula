@@ -1,68 +1,20 @@
-<script>
+<script type="module">
 
-    class Animal {
 
-        #nome = ''
-        #especie = ''
-        #familia
-        #nascimento
-        #metrica = {}
- 
-        constructor(nome, especie) {
-            this.#nome = nome
-            this.#especie = especie
-        }
+     // Importa a classe 'Animal'.
+     import {Animal} from './Animal.class.js'
 
-        alimentacao() { }
+     // Importa a classe 'Mamifero'.
+     import {Mamifero} from './Mamifero.class.js'
 
-       vacinar() { }
+     // Importa a classe 'Artropode'
+     import {Artropode} from './Artropode.class.js'
 
-       get nome() {
-            return this.#nome
-       }
+     var foca = new Mamifero('Fofinha', 'mamífero')
+     console.log(foca)
 
-       set nome(nome) {
-            this.#nome = nome
-       }
-
-       get especie() {
-            return this.#especie
-       }
-
-       set especie(especie) {
-            this.#especie = especie
-       }
-
-       get familia() {
-            return this.#familia
-       }
-
-       set familia(familia) {
-            this.#familia = familia
-       }
-
-       get nascimento() {
-            return this.#nascimento
-       }
-
-       set nascimento(nascimento) {
-            this.#nascimento = nascimento
-       }
-
-       get metrica() {
-            return this.#metrica
-       }
-
-       set metrica(metrica) {
-            this.#metrica = metrica
-       }
-    }
-
-var foca = new Animal('Fofinha', 'mamífero')
-console.log(foca)
-
-var formiga = new Animal('Miguinha', 'artrópode')
-console.log(formiga)
+     var formiga = new Artropode('Miguinha', 'artrópode')
+     console.log(formiga)
 
 
 </script>
